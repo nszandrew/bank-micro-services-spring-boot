@@ -1,0 +1,13 @@
+CREATE TABLE tb_credit (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    account_number VARCHAR(50) NOT NULL,
+    id_customer BIGINT NOT NULL,
+    amount_credit DECIMAL(15, 2) NOT NULL,
+    start_date DATE NOT NULL,
+    due_date DATE NOT NULL,
+    score INT NOT NULL,
+    due_rate DATE NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
