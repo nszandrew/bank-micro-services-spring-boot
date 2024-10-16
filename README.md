@@ -60,7 +60,7 @@ Este projeto consiste em um sistema bancário desenvolvido usando uma arquitetur
 
 ### Requisitos
 - **Docker** instalado para executar os microservices.
-- **Java 21**.
+- **Java 17**.
 
 ### Passos para Execução
 1. Clone o repositório:
