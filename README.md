@@ -65,11 +65,11 @@ Este projeto consiste em um sistema bancário desenvolvido usando uma arquitetur
 ### Passos para Execução
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/bank-microservices.git
+   git clone https://github.com/nszandrew/bank-micro-services-spring-boot.git
    ```
 2. Navegue até o diretório do projeto:
    ```bash
-   cd bank-microservices
+   cd bank-micro-services-spring-boot
    ```
 3. Inicie os containers Docker:
    ```bash
