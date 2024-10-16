@@ -1,0 +1,994 @@
+{
+	"info": {
+		"_postman_id": "a8ad9bee-9520-4c47-86f9-2d53750c91a2",
+		"name": "Bank API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34472377"
+	},
+	"item": [
+		{
+			"name": "API Gateway",
+			"item": [
+				{
+					"name": "Customer Service",
+					"item": [
+						{
+							"name": "Criar conta no banco",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "XFaO2TxywvcSZDDyQxl2vmv5aeCeo9R7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\": \"Sandro Lima\",\r\n    \"email\": \"sdlima@email.com\",\r\n    \"dateOfBirth\": \"12-08-1971\",\r\n    \"cpf\": \"78945612300\",\r\n    \"phone\": \"11987654321\",\r\n    \"address\": \"Sao mathews, 100, Campinas, SP\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"customer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Encontrar cliente",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/customer/9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"customer",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar cliente",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\": \"Sandro Lima\",\r\n    \"email\": \"sdlima@email.com\",\r\n    \"dateOfBirth\": \"12-08-1971\",\r\n    \"cpf\": \"78945612300\",\r\n    \"phone\": \"11987654321\",\r\n    \"address\": \"Sao mathews, 100, Campinas, SP\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/customer/{id}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"customer",
+										"{id}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar cliente",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/customer/{id}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"customer",
+										"{id}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Account Service",
+					"item": [
+						{
+							"name": "Encontrar pelo Id do cliente",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/account?idCustomer=123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"account"
+									],
+									"query": [
+										{
+											"key": "idCustomer",
+											"value": "123"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Encontrar conta pelo numero da conta",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/account/accountnumber?accountNumber=637295-6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"account",
+										"accountnumber"
+									],
+									"query": [
+										{
+											"key": "accountNumber",
+											"value": "637295-6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Trocar tipo de conta",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/account?accountType=BUSINESS&idCustomer=123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"account"
+									],
+									"query": [
+										{
+											"key": "accountType",
+											"value": "BUSINESS"
+										},
+										{
+											"key": "idCustomer",
+											"value": "123"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transaction Service",
+					"item": [
+						{
+							"name": "Transaferencia TED",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-security-realm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 50.00,\r\n    \"accountNumberReceive\": \"764181-5\",\r\n    \"agencyReceive\": \"1792\",\r\n    \"accountNumberSender\": \"330767-5\",\r\n    \"agencySender\": \"1862\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/transaction/ted",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"transaction",
+										"ted"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Saque",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/transaction/withdraw?balance=300.00&idCustomer=764181-5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"transaction",
+										"withdraw"
+									],
+									"query": [
+										{
+											"key": "balance",
+											"value": "300.00"
+										},
+										{
+											"key": "idCustomer",
+											"value": "764181-5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deposito",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/transaction/deposit?balance=1000.00&idCustomer=764181-5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"transaction",
+										"deposit"
+									],
+									"query": [
+										{
+											"key": "balance",
+											"value": "1000.00"
+										},
+										{
+											"key": "idCustomer",
+											"value": "764181-5"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Credit Service",
+					"item": [
+						{
+							"name": "Ver seu score e credito",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/credit?idCustomer=9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"credit"
+									],
+									"query": [
+										{
+											"key": "idCustomer",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ver credito e score",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/credit?accountNumber=942390-1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"credit"
+									],
+									"query": [
+										{
+											"key": "accountNumber",
+											"value": "942390-1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar credito",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/credit?accountNumber=330767-5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"credit"
+									],
+									"query": [
+										{
+											"key": "accountNumber",
+											"value": "330767-5"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Payment Service",
+					"item": [
+						{
+							"name": "Fazer pagamentos do cartao",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/payment/pay?id=15&accountNumber=637295-6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"payment",
+										"pay"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "15"
+										},
+										{
+											"key": "accountNumber",
+											"value": "637295-6"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Card Service",
+					"item": [
+						{
+							"name": "Compra cartao credito",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/card/purchasecredit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"card",
+										"purchasecredit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Compra cartao debito",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"accountNumber\": \"637295-6\",\r\n\t\"amount\": \"120.00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/card/purchasedebit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"card",
+										"purchasedebit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Bloquear Cartao",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientSecret",
+											"value": "SwWZaxLISj0hc58rHEXgrfAUCk9Krfw7",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "spring-client-credentials-id",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8181/realms/spring-microservices-springrealm/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/card?accountNumber=202083-2&type=VIRTUAL",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"card"
+									],
+									"query": [
+										{
+											"key": "accountNumber",
+											"value": "202083-2"
+										},
+										{
+											"key": "type",
+											"value": "VIRTUAL"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
